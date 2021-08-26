@@ -1,0 +1,19 @@
+def fun(l):
+    s=" "
+    l1=[]
+    l2=[]
+    l3=[]
+    for i in l:
+        if i.isdigit():
+            l1.append(i)
+            l2.append(l.index(i))
+        else:
+            l3.append(i)
+    l3.reverse()
+    for i in range(len(l2)):
+        l3.insert(l2[i],l1[i])
+    for i in l3:
+        s+=i
+    return s
+l=list(input())
+print(fun(l))
